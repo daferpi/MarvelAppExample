@@ -17,6 +17,7 @@
 		972D8D43EE48C7CCC6CB25B7 /* Pods_MarvelAppExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7E7ECBB102ADAF79D13507 /* Pods_MarvelAppExample.framework */; };
 		E601D7934EE89150CA0D8489 /* Pods_MarvelAppExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1847CDDC3AAE47F3F9132 /* Pods_MarvelAppExampleTests.framework */; };
 		F164081AC59C2B79EDE90FC8 /* Pods_MarvelAppExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7331AAE8FC26FBC8C65110F /* Pods_MarvelAppExampleUITests.framework */; };
+		FF8BCBE3215A152E00F6D59F /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8BCBE2215A152E00F6D59F /* NetworkConstants.swift */; };
 		FFA7975621563B61006A1E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7975521563B61006A1E14 /* AppDelegate.swift */; };
 		FFA7975821563B61006A1E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7975721563B61006A1E14 /* ViewController.swift */; };
 		FFA7975D21563B64006A1E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA7975C21563B64006A1E14 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		E7331AAE8FC26FBC8C65110F /* Pods_MarvelAppExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelAppExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61E6D71F13FBF93418E5DDC /* Pods-MarvelAppExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAppExample/Pods-MarvelAppExample.release.xcconfig"; sourceTree = "<group>"; };
 		F88F83B8388FFDF6035ED5B7 /* Pods-MarvelAppExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAppExampleTests/Pods-MarvelAppExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF8BCBE2215A152E00F6D59F /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		FFA7975221563B61006A1E14 /* MarvelAppExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelAppExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA7975521563B61006A1E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA7975721563B61006A1E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				7DBDDFEF805F222267E3CA49 /* NetworkLayer.swift */,
+				FF8BCBE2215A152E00F6D59F /* NetworkConstants.swift */,
 			);
 			path = networkLayer;
 			sourceTree = "<group>";
@@ -384,8 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MarvelAppExampleTests/Pods-MarvelAppExampleTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -393,8 +394,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
@@ -410,15 +409,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MarvelAppExample-checkManifestLockResult.txt",
 			);
@@ -432,15 +427,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MarvelAppExampleTests-checkManifestLockResult.txt",
 			);
@@ -454,8 +445,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MarvelAppExampleUITests/Pods-MarvelAppExampleUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -463,8 +452,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
@@ -480,15 +467,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MarvelAppExampleUITests-checkManifestLockResult.txt",
 			);
@@ -502,8 +485,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MarvelAppExample/Pods-MarvelAppExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -513,8 +494,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -536,6 +515,7 @@
 			files = (
 				FFA7975821563B61006A1E14 /* ViewController.swift in Sources */,
 				FFA7975621563B61006A1E14 /* AppDelegate.swift in Sources */,
+				FF8BCBE3215A152E00F6D59F /* NetworkConstants.swift in Sources */,
 				7DBDD8CA6C8FA6F96DE07B65 /* NetworkLayer.swift in Sources */,
 				7DBDD0E4A408EA92918CEACC /* ListRepository.swift in Sources */,
 				7DBDD9A512A0D7285DDD8841 /* MarvelCharacter.swift in Sources */,
