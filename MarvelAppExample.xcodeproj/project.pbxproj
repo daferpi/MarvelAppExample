@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7DBDD0E4A408EA92918CEACC /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD1492B5C85DDD55260DA /* ListRepository.swift */; };
+		7DBDD1D9F6374CF86FE126CC /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD9480763ED098050E90D /* ApiClient.swift */; };
 		7DBDD4A6B39EE067BC5E3A79 /* ListCharacterViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD3D8B6A0985249D1C5AE /* ListCharacterViewModelCell.swift */; };
 		7DBDD8CA6C8FA6F96DE07B65 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDFEF805F222267E3CA49 /* NetworkLayer.swift */; };
 		7DBDD977AF4C8B99B9FB9FD2 /* ListCharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD325C27348DC2B84D14E /* ListCharactersService.swift */; };
@@ -52,6 +53,7 @@
 		7DBDD2912469DF04F344D621 /* MarvelCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelCharacter.swift; sourceTree = "<group>"; };
 		7DBDD325C27348DC2B84D14E /* ListCharactersService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharactersService.swift; sourceTree = "<group>"; };
 		7DBDD3D8B6A0985249D1C5AE /* ListCharacterViewModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharacterViewModelCell.swift; sourceTree = "<group>"; };
+		7DBDD9480763ED098050E90D /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		7DBDDA98962FA0483A765E1D /* ListCharacterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharacterViewModel.swift; sourceTree = "<group>"; };
 		7DBDDD70D879FD036F1DB20C /* ListCharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharacterView.swift; sourceTree = "<group>"; };
 		7DBDDFEF805F222267E3CA49 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				7DBDDFEF805F222267E3CA49 /* NetworkLayer.swift */,
 				FF8BCBE2215A152E00F6D59F /* NetworkConstants.swift */,
+				7DBDD9480763ED098050E90D /* ApiClient.swift */,
 			);
 			path = networkLayer;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				7DBDDD177152D9AC630DAC46 /* ListCharacterView.swift in Sources */,
 				7DBDDF6E0E104F94CFCD7C70 /* ListCharacterViewModel.swift in Sources */,
 				7DBDD4A6B39EE067BC5E3A79 /* ListCharacterViewModelCell.swift in Sources */,
+				7DBDD1D9F6374CF86FE126CC /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +738,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNPSVFPM6W;
 				INFOPLIST_FILE = MarvelAppExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -756,6 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNPSVFPM6W;
 				INFOPLIST_FILE = MarvelAppExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -777,6 +783,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNPSVFPM6W;
 				INFOPLIST_FILE = MarvelAppExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -798,6 +805,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNPSVFPM6W;
 				INFOPLIST_FILE = MarvelAppExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
