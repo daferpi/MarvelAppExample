@@ -18,6 +18,7 @@ target 'MarvelAppExample' do
   pod 'RxSwift'    
   pod 'RxCocoa'    
   pod 'Moya/RxSwift'
+  pod 'CryptoSwift'
 
   # Pods for MarvelAppExample
 

@@ -20,8 +20,10 @@
 		7DBDD8CA6C8FA6F96DE07B65 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDFEF805F222267E3CA49 /* NetworkLayer.swift */; };
 		7DBDD9090449CA51C00A2C86 /* SeriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD9835B8CB01E8FC85B32 /* SeriesList.swift */; };
 		7DBDD977AF4C8B99B9FB9FD2 /* ListCharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD325C27348DC2B84D14E /* ListCharactersService.swift */; };
+		7DBDDA0F258C2E824B623E73 /* ApiHashGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDE67B9CD90F96DE76522 /* ApiHashGenerator.swift */; };
 		7DBDDAD56835C475309B0C69 /* StoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDCFA3E2A53738C03A143 /* StoryList.swift */; };
 		7DBDDB41257C2E413AAB6997 /* SeriesSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDA8F42E896BD6D06C5EF /* SeriesSummary.swift */; };
+		7DBDDBE95FF97FCCF63CB1A5 /* ApiHashGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDEBF19EFAD3D8E0896DD /* ApiHashGeneratorTest.swift */; };
 		7DBDDC3695EB0A4FA6B94213 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDC594643FAC172B8006E /* Url.swift */; };
 		7DBDDD177152D9AC630DAC46 /* ListCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDD70D879FD036F1DB20C /* ListCharacterView.swift */; };
 		7DBDDE1C231B2C17E59502CD /* CharacterDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD744D2B8EBF6682F8E86 /* CharacterDataWrapper.swift */; };
@@ -35,7 +37,6 @@
 		FFA7975821563B61006A1E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7975721563B61006A1E14 /* ViewController.swift */; };
 		FFA7975D21563B64006A1E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA7975C21563B64006A1E14 /* Assets.xcassets */; };
 		FFA7976021563B64006A1E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA7975E21563B64006A1E14 /* LaunchScreen.storyboard */; };
-		FFA7976B21563B64006A1E14 /* MarvelAppExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7976A21563B64006A1E14 /* MarvelAppExampleTests.swift */; };
 		FFA7977621563B64006A1E14 /* MarvelAppExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7977521563B64006A1E14 /* MarvelAppExampleUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,8 @@
 		7DBDDC594643FAC172B8006E /* Url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		7DBDDCFA3E2A53738C03A143 /* StoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryList.swift; sourceTree = "<group>"; };
 		7DBDDD70D879FD036F1DB20C /* ListCharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharacterView.swift; sourceTree = "<group>"; };
+		7DBDDE67B9CD90F96DE76522 /* ApiHashGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHashGenerator.swift; sourceTree = "<group>"; };
+		7DBDDEBF19EFAD3D8E0896DD /* ApiHashGeneratorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHashGeneratorTest.swift; sourceTree = "<group>"; };
 		7DBDDED4F240AC125D608686 /* EventSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSummary.swift; sourceTree = "<group>"; };
 		7DBDDFC98681CAD10AC92626 /* CharacterDataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDataContainer.swift; sourceTree = "<group>"; };
 		7DBDDFEF805F222267E3CA49 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
@@ -94,7 +97,6 @@
 		FFA7975F21563B64006A1E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFA7976121563B64006A1E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA7976621563B64006A1E14 /* MarvelAppExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFA7976A21563B64006A1E14 /* MarvelAppExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAppExampleTests.swift; sourceTree = "<group>"; };
 		FFA7976C21563B64006A1E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA7977121563B64006A1E14 /* MarvelAppExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA7977521563B64006A1E14 /* MarvelAppExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAppExampleUITests.swift; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7DBDD2AE8C0AAC51B2C86EF1 /* networkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7DBDDEBF19EFAD3D8E0896DD /* ApiHashGeneratorTest.swift */,
+			);
+			path = networkLayer;
+			sourceTree = "<group>";
+		};
 		7DBDD3D755EC4F85DCBDFC76 /* ListCharacters */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,14 @@
 				7DBDD3D8B6A0985249D1C5AE /* ListCharacterViewModelCell.swift */,
 			);
 			path = ListCharacters;
+			sourceTree = "<group>";
+		};
+		7DBDDF0E45D2BA2E088792FB /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7DBDD2AE8C0AAC51B2C86EF1 /* networkLayer */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		FF9643442156431700B59912 /* entities */ = {
@@ -197,6 +215,7 @@
 				7DBDDFEF805F222267E3CA49 /* NetworkLayer.swift */,
 				FF8BCBE2215A152E00F6D59F /* NetworkConstants.swift */,
 				7DBDD9480763ED098050E90D /* ApiClient.swift */,
+				7DBDDE67B9CD90F96DE76522 /* ApiHashGenerator.swift */,
 			);
 			path = networkLayer;
 			sourceTree = "<group>";
@@ -248,8 +267,8 @@
 		FFA7976921563B64006A1E14 /* MarvelAppExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				FFA7976A21563B64006A1E14 /* MarvelAppExampleTests.swift */,
 				FFA7976C21563B64006A1E14 /* Info.plist */,
+				7DBDDF0E45D2BA2E088792FB /* data */,
 			);
 			path = MarvelAppExampleTests;
 			sourceTree = "<group>";
@@ -484,6 +503,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MarvelAppExample/Pods-MarvelAppExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -495,6 +515,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -602,6 +623,7 @@
 				7DBDD7FF8A168F083C3558BF /* Character.swift in Sources */,
 				7DBDD230105593AE350CF616 /* CharacterDataContainer.swift in Sources */,
 				7DBDDE1C231B2C17E59502CD /* CharacterDataWrapper.swift in Sources */,
+				7DBDDA0F258C2E824B623E73 /* ApiHashGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA7976B21563B64006A1E14 /* MarvelAppExampleTests.swift in Sources */,
+				7DBDDBE95FF97FCCF63CB1A5 /* ApiHashGeneratorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
