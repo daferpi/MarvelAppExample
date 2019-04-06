@@ -9,8 +9,9 @@
 import Foundation
 
 struct NetworkConstants {
-    static let API_KEY = "afed67d085831e707f8dc7ab639b641c"
-    static let BASE_URL = "https://gateway.marvel.com/"
+    static let PUBLIC_API_KEY = ""
+    static let PRIVATE_API_KEY = ""
+    static let BASE_URL = "https://gateway.marvel.com"
     
     struct ApiPath {
         static let CHARACTERS_LIST = "/v1/public/characters"
