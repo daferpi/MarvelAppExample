@@ -13,7 +13,7 @@ enum ApiClient {
     case comicDetails(comicId:String)
 }
 
-extension ApiClient:TargetType {
+extension ApiClient:TargetType {   
 
     public var baseURL: URL {
         return URL(string: NetworkConstants.BASE_URL)!
@@ -40,17 +40,17 @@ extension ApiClient:TargetType {
         switch self {
         case .charactersList:
             return "".utf8Encoded
-        case .characterDetail(let characterId):
+        case .characterDetail(_):
             return "".utf8Encoded
         case .comicsList:
             return "".utf8Encoded
-        case .comicDetails(let characterId):
+        case .comicDetails(_):
             return "".utf8Encoded
         }
     }
 
     public var task: Task {
-        return .requestPlain
+        return .requestParameters(parameters:["apikey" : NetworkConstants.API_KEY], encoding: URLEncoding.default)
     }
 
     public var headers: [String: String]? {

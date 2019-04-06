@@ -4,22 +4,22 @@
 target 'MarvelAppExample' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'RxSwift',    '~> 4.0'
-  pod 'RxCocoa',    '~> 4.0'
-  pod 'Moya/RxSwift', '~> 11.0'
+  pod 'RxSwift'    
+  pod 'RxCocoa'    
+  pod 'Moya/RxSwift'
 
   # Pods for MarvelAppExample
 
   target 'MarvelAppExampleTests' do
     inherit! :search_paths
-    pod 'RxBlocking', '~> 4.0'
-    pod 'RxTest',     '~> 4.0'
+    pod 'RxBlocking' 
+    pod 'RxTest'     
   end
 
   target 'MarvelAppExampleUITests' do
     inherit! :search_paths
-    pod 'RxBlocking', '~> 4.0'
-    pod 'RxTest',     '~> 4.0'
+    pod 'RxBlocking' 
+    pod 'RxTest'     
   end
 
 end
