@@ -38,6 +38,7 @@
 		FFA7975D21563B64006A1E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA7975C21563B64006A1E14 /* Assets.xcassets */; };
 		FFA7976021563B64006A1E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA7975E21563B64006A1E14 /* LaunchScreen.storyboard */; };
 		FFA7977621563B64006A1E14 /* MarvelAppExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7977521563B64006A1E14 /* MarvelAppExampleUITests.swift */; };
+		FFE1427822593760008B910B /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1427722593760008B910B /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		FFA7977121563B64006A1E14 /* MarvelAppExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA7977521563B64006A1E14 /* MarvelAppExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAppExampleUITests.swift; sourceTree = "<group>"; };
 		FFA7977721563B64006A1E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE1427722593760008B910B /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +143,6 @@
 				190C2736C55A4E94DEA03EBE /* Pods-MarvelAppExampleUITests.debug.xcconfig */,
 				177B033114F7E3C9247251EA /* Pods-MarvelAppExampleUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -216,6 +217,7 @@
 				FF8BCBE2215A152E00F6D59F /* NetworkConstants.swift */,
 				7DBDD9480763ED098050E90D /* ApiClient.swift */,
 				7DBDDE67B9CD90F96DE76522 /* ApiHashGenerator.swift */,
+				FFE1427722593760008B910B /* Secrets.swift */,
 			);
 			path = networkLayer;
 			sourceTree = "<group>";
@@ -616,6 +618,7 @@
 				7DBDD6B3501BBB5688D049AF /* EventList.swift in Sources */,
 				7DBDDAD56835C475309B0C69 /* StoryList.swift in Sources */,
 				7DBDD19619875A9478C1698E /* StorySummary.swift in Sources */,
+				FFE1427822593760008B910B /* Secrets.swift in Sources */,
 				7DBDD62208ADC83ECAC41651 /* ComicSummary.swift in Sources */,
 				7DBDDEC128A3E7BD8F889BB2 /* ComicList.swift in Sources */,
 				7DBDD2412A528BE76366B663 /* Image.swift in Sources */,
