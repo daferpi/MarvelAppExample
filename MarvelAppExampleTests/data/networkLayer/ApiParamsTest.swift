@@ -34,15 +34,17 @@ class ApiParamsTest: XCTestCase {
 
     func testShouldReturnDefaultApiParamsWhenCallCreateWithDefaultParams() {
 
-//        let timeStamp = 1
-//
-//        let apiParams = ApiParams.createDefaultParamsWithTimestam(timeStamp:timeStamp)
-//
-//        let params = apiParams.loadParams()
-//
-//        XCTAssertEqual(timeStamp, params[NetworkConstants.ApiParamNames.TIMESTAMP])
-//        XCTAssertEqual(Secrets.publicKey, params[NetworkConstants.ApiParamNames.API_KEY])
-//        XCTAssertEqual(timeStamp, params[NetworkConstants.ApiParamNames.HASH])
+        let timeStamp = 1
+
+        let hashGenerator = ApiHashGenerator(timeStamp: timeStamp)
+
+        let apiParams = ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: hashGenerator)
+
+        let params = apiParams.loadParams()
+
+        XCTAssertEqual(String(timeStamp), params[NetworkConstants.ApiParamNames.TIMESTAMP])
+        XCTAssertEqual(Secrets.publicKey, params[NetworkConstants.ApiParamNames.API_KEY])
+        XCTAssertEqual(hashGenerator.generateHash(), params[NetworkConstants.ApiParamNames.HASH])
     }
 
 

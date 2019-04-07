@@ -20,5 +20,14 @@ class ApiParams {
 }
 
 extension ApiParams {
+    
+    static func createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator) -> ApiParams {
 
+        let apiParams = ApiParams()
+        apiParams.addParam(paramName: NetworkConstants.ApiParamNames.TIMESTAMP, paramValue: String(hashGenerator.timeStamp))
+        apiParams.addParam(paramName: NetworkConstants.ApiParamNames.API_KEY, paramValue: String(hashGenerator.publicKey))
+        apiParams.addParam(paramName: NetworkConstants.ApiParamNames.HASH, paramValue: String(hashGenerator.generateHash()))
+
+        return apiParams
+    }
 }
