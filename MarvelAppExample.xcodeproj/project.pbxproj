@@ -14,8 +14,10 @@
 		7DBDD2412A528BE76366B663 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD1B2B785A2332F8C5AA8 /* Image.swift */; };
 		7DBDD3920AEB73237EA229B2 /* EventSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDED4F240AC125D608686 /* EventSummary.swift */; };
 		7DBDD4A6B39EE067BC5E3A79 /* ListCharacterViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD3D8B6A0985249D1C5AE /* ListCharacterViewModelCell.swift */; };
+		7DBDD5874A4381DC859CCF1C /* ApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDDCF7F8E42B771343CFE /* ApiParams.swift */; };
 		7DBDD62208ADC83ECAC41651 /* ComicSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD2ED2CE07886224CE594 /* ComicSummary.swift */; };
 		7DBDD6B3501BBB5688D049AF /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDA3EE5B6A8BA7FC4682F /* EventList.swift */; };
+		7DBDD6FED2AA246AE5C0D178 /* ApiParamsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDBBD96E62871158B896F /* ApiParamsTest.swift */; };
 		7DBDD7FF8A168F083C3558BF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD00DEB557290F38F5028 /* Character.swift */; };
 		7DBDD8CA6C8FA6F96DE07B65 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDDFEF805F222267E3CA49 /* NetworkLayer.swift */; };
 		7DBDD9090449CA51C00A2C86 /* SeriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDD9835B8CB01E8FC85B32 /* SeriesList.swift */; };
@@ -79,9 +81,11 @@
 		7DBDDA8F42E896BD6D06C5EF /* SeriesSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesSummary.swift; sourceTree = "<group>"; };
 		7DBDDA98962FA0483A765E1D /* ListCharacterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharacterViewModel.swift; sourceTree = "<group>"; };
 		7DBDDB3636B34E5E0C8DB85D /* ComicList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicList.swift; sourceTree = "<group>"; };
+		7DBDDBBD96E62871158B896F /* ApiParamsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiParamsTest.swift; sourceTree = "<group>"; };
 		7DBDDC594643FAC172B8006E /* Url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		7DBDDCFA3E2A53738C03A143 /* StoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryList.swift; sourceTree = "<group>"; };
 		7DBDDD70D879FD036F1DB20C /* ListCharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCharacterView.swift; sourceTree = "<group>"; };
+		7DBDDDCF7F8E42B771343CFE /* ApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiParams.swift; sourceTree = "<group>"; };
 		7DBDDE67B9CD90F96DE76522 /* ApiHashGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHashGenerator.swift; sourceTree = "<group>"; };
 		7DBDDEBF19EFAD3D8E0896DD /* ApiHashGeneratorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHashGeneratorTest.swift; sourceTree = "<group>"; };
 		7DBDDED4F240AC125D608686 /* EventSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSummary.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				7DBDDEBF19EFAD3D8E0896DD /* ApiHashGeneratorTest.swift */,
+				7DBDDBBD96E62871158B896F /* ApiParamsTest.swift */,
 			);
 			path = networkLayer;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				7DBDD9480763ED098050E90D /* ApiClient.swift */,
 				7DBDDE67B9CD90F96DE76522 /* ApiHashGenerator.swift */,
 				FFE1427722593760008B910B /* Secrets.swift */,
+				7DBDDDCF7F8E42B771343CFE /* ApiParams.swift */,
 			);
 			path = networkLayer;
 			sourceTree = "<group>";
@@ -627,6 +633,7 @@
 				7DBDD230105593AE350CF616 /* CharacterDataContainer.swift in Sources */,
 				7DBDDE1C231B2C17E59502CD /* CharacterDataWrapper.swift in Sources */,
 				7DBDDA0F258C2E824B623E73 /* ApiHashGenerator.swift in Sources */,
+				7DBDD5874A4381DC859CCF1C /* ApiParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DBDDBE95FF97FCCF63CB1A5 /* ApiHashGeneratorTest.swift in Sources */,
+				7DBDD6FED2AA246AE5C0D178 /* ApiParamsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

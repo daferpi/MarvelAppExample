@@ -50,7 +50,7 @@ extension ApiClient:TargetType {
     }
 
     public var task: Task {
-        return .requestParameters(parameters:["apikey" : NetworkConstants.PUBLIC_API_KEY], encoding: URLEncoding.default)
+        return .requestParameters(parameters:["apikey" : ""], encoding: URLEncoding.default)
     }
 
     public var headers: [String: String]? {
