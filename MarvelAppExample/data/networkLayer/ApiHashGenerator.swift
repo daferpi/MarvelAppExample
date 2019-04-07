@@ -12,6 +12,12 @@ struct ApiHashGenerator {
     let privateKey: String
     let publicKey: String
 
+    init(timeStamp: Int, privateKey: String = Secrets.privateKey, publicKey: String = Secrets.publicKey) {
+        self.timeStamp = timeStamp
+        self.privateKey = privateKey
+        self.publicKey = publicKey
+    }
+
     func generateHash() -> String {
         return "\(timeStamp)\(privateKey)\(publicKey)".md5()
     }

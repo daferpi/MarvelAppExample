@@ -32,5 +32,18 @@ class ApiParamsTest: XCTestCase {
         XCTAssertTrue(params.isEmpty)
     }
 
+    func testShouldReturnDefaultApiParamsWhenCallCreateWithDefaultParams() {
+
+//        let timeStamp = 1
+//
+//        let apiParams = ApiParams.createDefaultParamsWithTimestam(timeStamp:timeStamp)
+//
+//        let params = apiParams.loadParams()
+//
+//        XCTAssertEqual(timeStamp, params[NetworkConstants.ApiParamNames.TIMESTAMP])
+//        XCTAssertEqual(Secrets.publicKey, params[NetworkConstants.ApiParamNames.API_KEY])
+//        XCTAssertEqual(timeStamp, params[NetworkConstants.ApiParamNames.HASH])
+    }
+
 
 }

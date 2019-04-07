@@ -18,3 +18,7 @@ class ApiParams {
     }
 
 }
+
+extension ApiParams {
+
+}
