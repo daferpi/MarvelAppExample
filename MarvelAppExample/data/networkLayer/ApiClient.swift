@@ -50,7 +50,7 @@ extension ApiClient:TargetType {
     }
 
     public var task: Task {
-        return .requestParameters(parameters:["apikey" : ""], encoding: URLEncoding.default)
+        return .requestParameters(parameters:defaultParams, encoding: URLEncoding.default)
     }
 
     public var headers: [String: String]? {
@@ -67,5 +67,11 @@ private extension String {
 
     var utf8Encoded: Data {
         return data(using: .utf8)!
+    }
+}
+
+private extension ApiClient {
+    var defaultParams: [String: String] {
+        return ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator(timeStamp: Int(Date().timeIntervalSince1970)))
     }
 }
