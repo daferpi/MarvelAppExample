@@ -21,9 +21,19 @@ class ApiHashGeneratorTest: XCTestCase {
 
         let apiHashGenerator = ApiHashGenerator(timeStamp: timeStamp, privateKey: privateKey, publicKey: publicKey)
 
-
         let expectedHash = "\(timeStamp)\(privateKey)\(publicKey)".md5()
+        let generatedHash = apiHashGenerator.generateHash()
 
+        XCTAssertEqual(expectedHash, generatedHash)
+    }
+
+    func testShouldGenerateAValidHasMD5hWhenGenerateMethodIsCalledWithDefaultParams() {
+
+        let timeStamp = 1
+
+        let apiHashGenerator = ApiHashGenerator(timeStamp: timeStamp)
+
+        let expectedHash = "\(timeStamp)\(Secrets.privateKey)\(Secrets.publicKey)".md5()
         let generatedHash = apiHashGenerator.generateHash()
 
         XCTAssertEqual(expectedHash, generatedHash)
