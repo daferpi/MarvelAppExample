@@ -72,6 +72,14 @@ private extension String {
 
 private extension ApiClient {
     var defaultParams: [String: String] {
-        return ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator(timeStamp: Int(Date().timeIntervalSince1970)))
+        return ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator(timeStamp: Int(Date().timeIntervalSince1970))).loadParams()
+    }
+    
+    func stubbedResponse(_ fileName: String) -> Data! {
+        @objc class TestClass: NSObject {}
+        
+        let bundle = Bundle(for: TestClass.self)
+        let path = bundle.path(forResource: fileName, ofType: "json")
+        return try? Data(contentsOf: URL(fileURLWithPath: path!))
     }
 }
