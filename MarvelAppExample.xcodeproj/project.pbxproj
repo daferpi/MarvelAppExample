@@ -40,6 +40,7 @@
 		FFA7975D21563B64006A1E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA7975C21563B64006A1E14 /* Assets.xcassets */; };
 		FFA7976021563B64006A1E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA7975E21563B64006A1E14 /* LaunchScreen.storyboard */; };
 		FFA7977621563B64006A1E14 /* MarvelAppExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7977521563B64006A1E14 /* MarvelAppExampleUITests.swift */; };
+		FFA7A4CF225BC4070071956A /* ApiClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7A4CE225BC4070071956A /* ApiClientTest.swift */; };
 		FFE1427822593760008B910B /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1427722593760008B910B /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		FFA7977121563B64006A1E14 /* MarvelAppExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA7977521563B64006A1E14 /* MarvelAppExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAppExampleUITests.swift; sourceTree = "<group>"; };
 		FFA7977721563B64006A1E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA7A4CE225BC4070071956A /* ApiClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTest.swift; sourceTree = "<group>"; };
 		FFE1427722593760008B910B /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 			children = (
 				7DBDDEBF19EFAD3D8E0896DD /* ApiHashGeneratorTest.swift */,
 				7DBDDBBD96E62871158B896F /* ApiParamsTest.swift */,
+				FFA7A4CE225BC4070071956A /* ApiClientTest.swift */,
 			);
 			path = networkLayer;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA7A4CF225BC4070071956A /* ApiClientTest.swift in Sources */,
 				7DBDDBE95FF97FCCF63CB1A5 /* ApiHashGeneratorTest.swift in Sources */,
 				7DBDD6FED2AA246AE5C0D178 /* ApiParamsTest.swift in Sources */,
 			);

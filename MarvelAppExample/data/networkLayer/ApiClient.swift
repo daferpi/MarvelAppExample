@@ -13,7 +13,8 @@ enum ApiClient {
     case comicDetails(comicId:String)
 }
 
-extension ApiClient:TargetType {   
+extension ApiClient: TargetType {
+    
 
     public var baseURL: URL {
         return URL(string: NetworkConstants.BASE_URL)!
@@ -48,10 +49,11 @@ extension ApiClient:TargetType {
             return "".utf8Encoded
         }
     }
-
-    public var task: Task {
-        return .requestParameters(parameters:defaultParams, encoding: URLEncoding.default)
+    
+   public var task: Task {
+        return .requestPlain
     }
+    
 
     public var headers: [String: String]? {
         return ["Content-type": "application/json"]
@@ -71,9 +73,6 @@ private extension String {
 }
 
 private extension ApiClient {
-    var defaultParams: [String: String] {
-        return ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator(timeStamp: Int(Date().timeIntervalSince1970))).loadParams()
-    }
     
     func stubbedResponse(_ fileName: String) -> Data! {
         @objc class TestClass: NSObject {}
@@ -81,5 +80,18 @@ private extension ApiClient {
         let bundle = Bundle(for: TestClass.self)
         let path = bundle.path(forResource: fileName, ofType: "json")
         return try? Data(contentsOf: URL(fileURLWithPath: path!))
+    }
+}
+
+struct ApiClientFactory {
+    static func createApiClientWithApiParams(apiParams params: ApiParams) -> MoyaProvider<ApiClient> {
+        
+        let endpointClosure = { (target: ApiClient) -> Endpoint in
+            let task = Task.requestParameters(parameters: params.loadParams(), encoding: URLEncoding.queryString)
+            let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
+            return defaultEndpoint.replacing(task: task)
+        }
+        
+        return MoyaProvider(endpointClosure: endpointClosure)
     }
 }
