@@ -40,7 +40,7 @@ extension ApiClient: TargetType {
     public var sampleData: Data {
         switch self {
         case .charactersList:
-            return "".utf8Encoded
+            return stubbedResponse("marvelResponse")
         case .characterDetail(_):
             return "".utf8Encoded
         case .comicsList:
@@ -85,13 +85,21 @@ private extension ApiClient {
 
 struct ApiClientFactory {
     static func createApiClientWithApiParams(apiParams params: ApiParams) -> MoyaProvider<ApiClient> {
-        
+        let endpointClosure = createEndpoint(apiParams: params)
+        return MoyaProvider(endpointClosure: endpointClosure)
+    }
+
+    static func createStubApiClientWithApiParams(apiParams params: ApiParams) -> MoyaProvider<ApiClient> {
+        let endpointClosure = createEndpoint(apiParams: params)
+        return MoyaProvider(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub, plugins: [NetworkLoggerPlugin(verbose: true)])
+    }
+
+    static private func createEndpoint(apiParams params: ApiParams) -> (ApiClient) -> Endpoint {
         let endpointClosure = { (target: ApiClient) -> Endpoint in
             let task = Task.requestParameters(parameters: params.loadParams(), encoding: URLEncoding.queryString)
             let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
             return defaultEndpoint.replacing(task: task)
         }
-        
-        return MoyaProvider(endpointClosure: endpointClosure)
+        return endpointClosure
     }
 }

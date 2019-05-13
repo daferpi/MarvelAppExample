@@ -7,23 +7,26 @@
 //
 
 import XCTest
+import RxSwift
+import RxBlocking
 @testable import MarvelAppExample
 
 class CharactersRepositoryTest: XCTestCase {
 
-    let repository: CharactersRepository = CharacterRepositoryRemoteApi()
+    let repository: CharactersRepository = CharacterRepositoryRemoteApi(apiClient: ApiClientFactory.createStubApiClientWithApiParams(apiParams: ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator(timeStamp: 1))))
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testShouldReturnCharacterContainerObservableWhenLoadCharacters() throws {
+
+        // When
+        let characterContainer: CharacterDataContainer? = try repository.loadCharacterContainer()?.toBlocking().first()
+
+        // Then
+        XCTAssertNotNil(characterContainer)
+        XCTAssertNotNil(characterContainer?.results)
+        XCTAssertEqual(20,characterContainer?.results!.count)
+
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
 
 }

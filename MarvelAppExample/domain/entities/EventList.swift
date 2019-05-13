@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct EventList {
+struct EventList: Codable {
     let available:Int?
     let returned:Int?
     let collectionURI:String?

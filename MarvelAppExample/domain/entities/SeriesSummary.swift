@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct SeriesSummary {
+struct SeriesSummary: Codable {
 
     let resourceURI:String?
     let name:String?

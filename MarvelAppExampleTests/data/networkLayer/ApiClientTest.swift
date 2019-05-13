@@ -16,7 +16,7 @@ class ApiClientTest: XCTestCase {
     func testWhenCharacterListIsCalledReturnData() {
         let fullCharacterListUrl = "https://gateway.marvel.com/v1/public/characters?apikey=afed67d085831e707f8dc7ab639b641c&hash=06a76e669879f5475524539efb629746&ts=1"
         
-        let apiClient = createApiClientWithApiParams(apiParams: ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator(timeStamp: 1)))
+        let apiClient = ApiClientFactory.createStubApiClientWithApiParams(apiParams: ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator(timeStamp: 1)))
         
         let expectation = self.expectation(description: "creation")
         
@@ -35,17 +35,6 @@ class ApiClientTest: XCTestCase {
         XCTAssertNotNil(data)
 
         
-    }
-    
-    private func createApiClientWithApiParams(apiParams params: ApiParams) -> MoyaProvider<ApiClient> {
-        
-        let endpointClosure = { (target: ApiClient) -> Endpoint in
-            let task = Task.requestParameters(parameters: params.loadParams(), encoding: URLEncoding.queryString)
-            let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
-            return defaultEndpoint.replacing(task: task)
-        }
-        
-        return MoyaProvider(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub, plugins: [NetworkLoggerPlugin(verbose: true)])
     }
 
 }

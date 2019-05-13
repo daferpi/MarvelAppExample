@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct SeriesList {
+struct SeriesList: Codable {
 
     let available:Int?
     let returned:Int?

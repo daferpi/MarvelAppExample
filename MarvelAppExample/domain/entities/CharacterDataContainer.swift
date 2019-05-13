@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct CharacterDataContainer {
+struct CharacterDataContainer: Codable {
     let offset:Int?
     let limit:Int?
     let total:Int?
