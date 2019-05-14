@@ -12,7 +12,7 @@ struct Character: Codable {
     let modified:String?
     let resourceURI:String?
     let urls:[Url]?
-    let thumbnail:[Image]?
+    let thumbnail:Image?
     let comics:ComicList?
     let stories:StoryList?
     let events:EventList?

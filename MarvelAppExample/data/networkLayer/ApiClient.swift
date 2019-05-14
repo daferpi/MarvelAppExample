@@ -40,7 +40,8 @@ extension ApiClient: TargetType {
     public var sampleData: Data {
         switch self {
         case .charactersList:
-            return stubbedResponse("marvelResponse")
+            let stubbed = stubbedResponse("marvelResponse")
+            return stubbed!
         case .characterDetail(_):
             return "".utf8Encoded
         case .comicsList:

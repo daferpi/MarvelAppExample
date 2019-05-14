@@ -9,7 +9,7 @@ import Moya
 
 protocol CharactersRepository {
 
-    func loadCharacterContainer() -> Observable<CharacterDataContainer>?
+    func loadCharacterContainer() -> Observable<CharacterDataWrapper>?
 }
 
 final class CharacterRepositoryRemoteApi: CharactersRepository {
@@ -20,11 +20,11 @@ final class CharacterRepositoryRemoteApi: CharactersRepository {
         self.apiClient = apiClient
     }
 
-    func loadCharacterContainer() ->  Observable<CharacterDataContainer>? {
+    func loadCharacterContainer() ->  Observable<CharacterDataWrapper>? {
         return self.apiClient.rx.request(.charactersList)
                 .asObservable()
                 .filterSuccessfulStatusCodes()
-                .map(CharacterDataContainer.self, atKeyPath: "data")
+                .map(CharacterDataWrapper.self)
                 .asObservable()
     }
 }

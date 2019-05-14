@@ -18,12 +18,12 @@ class CharactersRepositoryTest: XCTestCase {
     func testShouldReturnCharacterContainerObservableWhenLoadCharacters() throws {
 
         // When
-        let characterContainer: CharacterDataContainer? = try repository.loadCharacterContainer()?.toBlocking().first()
+        let characterContainer: CharacterDataWrapper? = try repository.loadCharacterContainer()?.toBlocking().first()
 
         // Then
         XCTAssertNotNil(characterContainer)
-        XCTAssertNotNil(characterContainer?.results)
-        XCTAssertEqual(20,characterContainer?.results!.count)
+        XCTAssertNotNil(characterContainer?.data)
+        XCTAssertEqual(20,characterContainer?.data?.results?.count)
 
     }
 

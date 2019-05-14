@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct CharacterDataWrapper {
+struct CharacterDataWrapper: Codable {
     let code:Int?
     let status:String?
     let copyright:String?
