@@ -28,7 +28,7 @@ class CharactersRepositoryTest: XCTestCase {
 
     }
 
-    func testShouldReturnNilWhenApiClientReturnError() throws {
+    func testShouldReturnErrorWhenApiClientReturnErrorCode() throws {
         // Given
         let apiClient = ApiClientFactory.createStubApiClientWithDefaultParams(responseClosure: { .networkResponse(500, "Server Error".data(using: .utf8)!) })
         repository = CharacterRepositoryRemoteApi(apiClient: apiClient)
@@ -37,6 +37,8 @@ class CharactersRepositoryTest: XCTestCase {
 
         let result = repository.loadCharacterContainer()!.toBlocking().materialize()
 
+
+        // Then
         var characterError: MoyaError!
         switch result {
         case .completed:
@@ -44,10 +46,32 @@ class CharactersRepositoryTest: XCTestCase {
         case .failed(_, error: let error):
             characterError = error as? MoyaError
         }
-        
-        // Then
         XCTAssertNotNil(characterError)
         XCTAssertEqual(500, characterError.response?.statusCode)
+
+    }
+
+    func testShouldReturnErrorWhenApiClientNetworkFails() throws {
+        // Given
+        let error = NSError(domain: "test", code: 999)
+        let apiClient = ApiClientFactory.createStubApiClientWithDefaultParams(responseClosure: { .networkError(error) })
+        repository = CharacterRepositoryRemoteApi(apiClient: apiClient)
+
+        // When
+
+        let result = repository.loadCharacterContainer()!.toBlocking().materialize()
+
+
+        // Then
+        var characterError: NSError!
+        switch result {
+        case .completed:
+            XCTFail()
+        case .failed(_, error: let error):
+            characterError = error as NSError
+        }
+        XCTAssertNotNil(characterError)
+        XCTAssertEqual("The operation couldn’t be completed. (test error 999.)", characterError.localizedDescription)
 
     }
 
