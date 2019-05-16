@@ -40,7 +40,7 @@ extension ApiClient: TargetType {
     public var sampleData: Data {
         switch self {
         case .charactersList:
-            let stubbed = stubbedResponse("marvelResponse")
+            let stubbed = ApiClient.stubbedResponse("marvelResponse")
             return stubbed!
         case .characterDetail(_):
             return "".utf8Encoded
@@ -73,11 +73,11 @@ private extension String {
     }
 }
 
-private extension ApiClient {
-    
-    func stubbedResponse(_ fileName: String) -> Data! {
+extension ApiClient {
+
+    static func stubbedResponse(_ fileName: String) -> Data! {
         @objc class TestClass: NSObject {}
-        
+
         let bundle = Bundle(for: TestClass.self)
         let path = bundle.path(forResource: fileName, ofType: "json")
         return try? Data(contentsOf: URL(fileURLWithPath: path!))
@@ -88,11 +88,6 @@ struct ApiClientFactory {
     static func createApiClientWithApiParams(apiParams params: ApiParams) -> MoyaProvider<ApiClient> {
         let endpointClosure = createEndpoint(apiParams: params)
         return MoyaProvider(endpointClosure: endpointClosure)
-    }
-
-    static func createStubApiClientWithApiParams(apiParams params: ApiParams) -> MoyaProvider<ApiClient> {
-        let endpointClosure = createEndpoint(apiParams: params)
-        return MoyaProvider(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub, plugins: [NetworkLoggerPlugin(verbose: true)])
     }
 
     static private func createEndpoint(apiParams params: ApiParams) -> (ApiClient) -> Endpoint {

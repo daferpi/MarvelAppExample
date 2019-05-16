@@ -16,7 +16,8 @@ class ApiClientTest: XCTestCase {
     func testWhenCharacterListIsCalledReturnData() {
         let fullCharacterListUrl = "https://gateway.marvel.com/v1/public/characters?apikey=afed67d085831e707f8dc7ab639b641c&hash=06a76e669879f5475524539efb629746&ts=1"
         
-        let apiClient = ApiClientFactory.createStubApiClientWithApiParams(apiParams: ApiParams.createDefaultParamsWithHashGenerator(hashGenerator: ApiHashGenerator(timeStamp: 1)))
+        let apiClient = ApiClientFactory.createStubApiClientWithDefaultParams(
+                responseClosure: { .networkResponse(200, ApiClient.stubbedResponse("marvelResponse")) })
         
         let expectation = self.expectation(description: "creation")
         
