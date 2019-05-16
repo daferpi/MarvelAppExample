@@ -32,19 +32,19 @@ class CharactersRepositoryTest: XCTestCase {
         // Given
         let apiClient = ApiClientFactory.createStubApiClientWithDefaultParams(responseClosure: { .networkResponse(500, "Server Error".data(using: .utf8)!) })
         repository = CharacterRepositoryRemoteApi(apiClient: apiClient)
-        let expectation = self.expectation(description: "load characters")
 
         // When
-        var characterError: MoyaError!
-        _ = repository.loadCharacterContainer()!.subscribe(onNext: { characterWrapper in
-            XCTFail()
-        }, onError: { error in
-            characterError = error as? MoyaError
-            expectation.fulfill()
-        })
-        
-         waitForExpectations(timeout: 5, handler: nil)
 
+        let result = repository.loadCharacterContainer()!.toBlocking().materialize()
+
+        var characterError: MoyaError!
+        switch result {
+        case .completed:
+            XCTFail()
+        case .failed(_, error: let error):
+            characterError = error as? MoyaError
+        }
+        
         // Then
         XCTAssertNotNil(characterError)
         XCTAssertEqual(500, characterError.response?.statusCode)
