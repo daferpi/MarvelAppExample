@@ -4,6 +4,22 @@
 //
 
 import Foundation
+import RxSwift
 
-struct ListCharacterViewModel {
+
+protocol ListCharacterViewModel {
+    func fetchCharacterData() -> Observable<CharacterDataWrapper>?
+}
+
+struct ListCharacterViewModelRemoteApi: ListCharacterViewModel {
+
+    let repository: CharactersRepository
+
+    init(repository: CharactersRepository = CharacterRepositoryRemoteApi()) {
+        self.repository = repository
+    }
+
+    func fetchCharacterData() -> Observable<CharacterDataWrapper>? {
+        return self.repository.loadCharacterContainer()
+    }
 }
