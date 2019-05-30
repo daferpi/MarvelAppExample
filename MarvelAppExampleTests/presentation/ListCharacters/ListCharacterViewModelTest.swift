@@ -15,7 +15,7 @@ import RxBlocking
 class ListCharacterViewModelTest: XCTestCase {
 
 
-    let viewModel: ListCharacterViewModel = ListCharacterViewModelRemoteApi(repository: CharactersRepositoryMock())
+    var viewModel: ListCharacterViewModel = ListCharacterViewModelRemoteApi(repository: CharactersRepositoryMock())
 
     func testWhenFetchCharacterDataReturnObservableCharacterDataWrapper() throws {
 
@@ -30,8 +30,27 @@ class ListCharacterViewModelTest: XCTestCase {
         XCTAssertEqual(5, dataWrapper?.data?.results?.count)
         XCTAssertEqual("200", dataWrapper?.status)
         XCTAssertEqual(characterExpected, dataWrapper!.data!.results![0])
+    }
 
 
+    func testWhenFetchCharacterFailsReturnError() throws {
+
+        let repository = CharactersRepositoryMock(responseType: .error)
+        viewModel = ListCharacterViewModelRemoteApi(repository: repository)
+
+        // When
+        let result = try! viewModel.fetchCharacterData()!.toBlocking().materialize()
+
+        // Then
+        var characterError: MoyaError!
+        switch result {
+        case .completed:
+            XCTFail()
+        case .failed(_, error: let error):
+            characterError = error as? MoyaError
+        }
+        XCTAssertNotNil(characterError)
+        XCTAssertEqual("Failed to map Endpoint to a URLRequest.", characterError.errorDescription)
     }
 
 
